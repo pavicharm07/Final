@@ -1,0 +1,8 @@
+2021-04-20 03:19:44.977  INFO 6988 --- [http-nio-8075-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-20 03:19:45.032  INFO 6988 --- [http-nio-8075-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-20 03:19:45.108  INFO 6988 --- [http-nio-8075-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 71 ms
+2021-04-20 03:19:46.156  INFO 6988 --- [http-nio-8075-exec-10] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:620}] to localhost:27017
+2021-04-20 03:19:46.196  INFO 6988 --- [http-nio-8075-exec-10] com.tweetapp.controller.UserController   : User has entered wrong credentials
+2021-04-20 03:28:43.164  INFO 6988 --- [http-nio-8075-exec-8] com.tweetapp.controller.UserController   : User has entered wrong credentials
+2021-04-20 03:47:04.922  INFO 6988 --- [http-nio-8075-exec-6] com.tweetapp.controller.UserController   : User has entered wrong credentials
+2021-04-20 04:21:08.604  INFO 6988 --- [http-nio-8075-exec-4] com.tweetapp.controller.UserController   : User has entered wrong credentials
