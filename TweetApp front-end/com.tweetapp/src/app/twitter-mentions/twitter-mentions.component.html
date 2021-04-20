@@ -1,0 +1,14 @@
+<h1>TWEETAPP MENTIONS</h1>
+<div *ngIf="undefined === myData">Loading...</div>
+<div *ngIf="undefined !== myData">
+  <div class ="card">
+			<ng-container *ngFor="let tweets of myData.data">
+				<h3>{{tweets.full_text
+		}}</h3>
+				<p>{{tweets.created_at}}</p>
+				<p>{{tweets.user.email}}</p>
+
+				</ng-container>
+
+</div>
+</div>

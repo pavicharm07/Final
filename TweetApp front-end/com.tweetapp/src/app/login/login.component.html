@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+<br>
+<br>
+<br>
+
+
+  <div class="container">
+    <b><h1>TWEET APP</h1></b>
+    <hr>
+  
+    <label for="email"><b>EMAIL ID</b></label>
+    <input [(ngModel)]="user.email" placeholder="email"  id="email" class="form-control" name="email" [(ngModel)]="user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" #email="ngModel"
+    [class.is.invalid]="email.invalid && email.touched"
+    >
+    <!--<small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required field</small>-->
+    <div *ngIf="email.errors && (email.invalid && email.touched)">
+      <small class="text-danger" *ngIf="email.errors.required">Email Id is required</small>
+      <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid Email Id</small>
+    </div>
+<br>
+<br>
+    <label for="password"><b>PASSWORD</b></label>
+    <input [(ngModel)]="user.password" placeholder="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" #password="ngModel"
+    [class.is.invalid]="password.invalid && password.touched"
+    >
+   <!---- <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required field</small>-->
+   <div *ngIf="password.errors && (password.invalid && password.touched)">
+    <small class="text-danger" *ngIf="password.errors.required">Password is required</small>
+    <small class="text-danger" *ngIf="password.errors.pattern">Enter the valid Password</small>
+  </div>
+    <hr>
+   
+
+    
+  
+  
+   <!-- <a routerLink="/learning"><button>submit</button></a> -->
+   <td><button type="submit" class="submit" (click)="loginUser()">SUBMIT</button></td>
+     <br>
+    <a routerLink="/forgot">Forgot password</a>
+<br>
+<br>
+<br>
+  <div class="container signin" >
+      <p>Dont have an account? <a routerLink="/registration">Sign up</a>.</p>
+    </div>
+     </div>                       
+
+<br>
+<br>
+<br>
+
+</html>
