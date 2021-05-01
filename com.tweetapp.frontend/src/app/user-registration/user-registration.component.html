@@ -1,0 +1,108 @@
+<div class="container register-form">
+  <div class="form">
+      <div class="note">
+          <h2>User Registration Form </h2>
+      </div>
+       <!-- <form #userForm = "ngForm" (ngSubmit) ="onSubmit()"> -->
+         <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="form-content">
+          <div class="row">
+            <div class ="col-md-3"></div>
+              <div class="col-md-3">
+                  <div class="form-group">
+                      <label>First Name*</label>
+                      <input formControlName ="firstName" type="text" class="form-control" placeholder="Enter your first name here *" [class.is-invalid]="firstName.invalid && firstName.touched"/>
+                      <div *ngIf="firstName.invalid && firstName.touched">
+                      <small  *ngIf="firstName.errors?.required">First name is required</small>
+                      <br>
+                      <small  *ngIf="firstName.errors?.minlength">Min lenght is required</small>
+                      <small  *ngIf="firstName.errors?.email">{{firstName.errors?.email.value}}</small>
+
+                      </div>
+
+                     </div>
+                  <div class="form-group">
+                   <label>Last Name</label>
+                      <input type="text" formControlName ="lastName" [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" placeholder="Enter your last name here"/>
+                      <div *ngIf="lastName.invalid && lastName.touched">
+                       <small  *ngIf="lastName.errors?.required">Last name is required</small>
+                       </div>
+                     </div>
+                  <div class="form-group">
+                   <label>Email*</label>
+                      <input type="text" id="email" formControlName ="email" class="form-control" [class.is-invalid]="email.invalid && email.touched" placeholder="sample@gmail.com"/>
+                      <div *ngIf="email.invalid && email.touched">
+                       <small  *ngIf="email.errors?.required">Email is required</small>
+                       <small  *ngIf="email.errors?.email">{{email.errors?.email.value}}</small>
+
+                       </div>
+                     </div>
+                  <div class="form-group">
+                      <p> Gender*</p>
+                      <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio"  formControlName="gender" value = "male" name="gender" [checked]="true"> Male
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio"  formControlName="gender" value="female" name="gender"> Female
+                          </label>
+                        </div>
+                        <div class="form-check disabled">
+                          <label class="form-check-label">
+                            <input type="radio"  formControlName="gender" value="others" name="gender"> Others
+                          </label>
+                        </div>
+                        <div class="form-group">
+                         <label>login Id</label>
+                            <input type="text"  formControlName ="loginId" class="form-control" [class.is-invalid]="loginId.invalid && loginId.touched" placeholder="loginId"/>
+                            <div *ngIf="loginId.invalid && loginId.touched">
+                             <small  *ngIf="loginId.errors?.required">Login Id is required</small>
+                             </div>
+                           </div>
+                        <br>
+                        <button type="submit"  [disabled]="registrationForm.invalid" class="btn btn-primary">Submit</button>
+                  </div>
+              </div> 
+              <div class="col-md-3">
+                  <div class="form-group">
+                   <label>Password*</label>
+                      <input type="password" id="password" formControlName ="password" class="form-control" [class.is-invalid]="password.invalid && password.touched" placeholder="password"/>
+                      <div *ngIf="password.invalid && password.touched">
+                       <small  *ngIf="password.errors?.required">Password is required</small>
+                       </div>
+                     </div>
+
+                  <div class="form-group">
+                   <label>Confirm Password*</label>
+                      <input type="password" class="form-control" formControlName ="confirmPassword" [class.is-invalid]="confirmPassword.invalid && confirmPassword.touched"   placeholder="Confirm Password *" />
+                      <div *ngIf="confirmPassword.invalid && confirmPassword.touched">
+                       <small  *ngIf="confirmPassword.errors?.required">Password is required</small>
+                       </div>
+                     </div>
+                  <div class="form-group">
+                   <label>Date of birth*</label>
+                      <input type="text" formControlName = "dob" class="form-control"  [class.is-invalid]="dob.invalid && dob.touched" placeholder="DD/MM/YYYY"/>
+                      <div *ngIf="dob.invalid && dob.touched">
+                       <small  *ngIf="dob.errors?.required">dob is required</small>
+                       <small *ngIf="dob.errors?.dob">{{dob.errors?.dob.value}}</small>
+                       </div>
+                     </div>
+                     <div class="form-group">
+                       <label>Contact number</label>
+                          <input type="text" class="form-control" formControlName ="contactNumber" [class.is-invalid]="contactNumber.invalid && contactNumber.touched"   placeholder="Contact Number *" />
+                          <div *ngIf="contactNumber.invalid && contactNumber.touched">
+                           <small  *ngIf="contactNumber.errors?.required">contact is required</small>
+                           </div>
+                         </div>
+                    
+              </div>
+              </div>
+       
+         
+          
+      </div>
+   </form>
+  </div>
+</div>

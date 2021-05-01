@@ -1,0 +1,52 @@
+#home-button{
+    color: blue;
+    background-color: white;
+    padding:0px;
+    border:0px;
+}
+#like-button{
+
+    background-color: white;
+    padding:0px;
+    border:0px;
+}
+.my-row{
+    padding-top:40px;
+    padding-left:0px;
+   
+}
+
+.model.show{
+    display:block;
+}
+.row{
+    padding-top:40px;
+}
+.green {
+    color:aqua;
+}
+
+.red {
+    color: red;
+}
+.my-col{
+ 
+
+    padding-top: 20px;
+    padding-left: 0px;
+}
+
+#icons{
+    height: 550px;
+    width:  100px;
+}
+
+.tweets{
+    padding-top:40px;
+    width: 300px;
+    border: 1px solid #E8E8E8;
+    padding: 5px;
+    margin: 40px;
+    left: 30px;
+}
+
